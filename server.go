@@ -10,7 +10,7 @@ type msg string
 var counter int
 
 func (m msg) ServeHTTP(resp http.ResponseWriter, req *http.Request) {
-	//fmt.Fprint(resp, m)
+	fmt.Fprint(resp, m)
 	counter = counter + 1
 	fmt.Fprint(resp, counter)
 
